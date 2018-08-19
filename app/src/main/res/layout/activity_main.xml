@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="10dp"
     tools:context="happycity.hackathon.nami.coffee_tracking.MainActivity">
 
     <SurfaceView
@@ -11,14 +11,21 @@
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="400dp" />
-
-    <TextView
-        android:id="@+id/txtResult"
+    <LinearLayout
         android:layout_below="@+id/cameraPreview"
-        android:layout_marginTop="10dp"
-        android:text="@string/result_text_default"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
+        android:background="@drawable/my_custom_result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:gravity="center_horizontal"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_marginTop="10dp"
+            android:text="@string/result_text_default"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="9pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 </RelativeLayout>
